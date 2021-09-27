@@ -11,4 +11,4 @@ drinking_buddies= list(filter(age, friends))
 
 for i in drinking_buddies:
     print(i)
-    
+

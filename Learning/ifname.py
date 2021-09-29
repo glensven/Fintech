@@ -1,3 +1,8 @@
 import filter
-print(__name__)
-print(filter.__name__)
+def hello():
+    print('hello')
+
+if __name__ == '__main__':
+    hello()
+else:
+    print('running other module indirectly')

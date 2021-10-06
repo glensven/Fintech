@@ -1,4 +1,3 @@
-import multiprocessing
 from multiprocessing import Process, cpu_count
 
 import time
@@ -9,10 +8,17 @@ def counter(num):
         count += 1
 
 def main():
-    a = Process(target=counter, args=(10000000000, ))
+    a = Process(target=counter, args=(5000000000, ))
+
+
+
+    b = Process(target=counter, args=(5000000000,))
 
     a.start()
+    b.start()
+
     a.join()
+    b.join()
 
     print("finished in: ", time.perf_counter(), "seconds")
 
